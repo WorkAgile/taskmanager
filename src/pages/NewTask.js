@@ -8,22 +8,24 @@ const Form = styled.form`
 `;
 
 const TitleInput = styled.input`
-  width: 70%;
+  width: 90%;
   margin: 10px;
   height: 40px;
   font-size: 1rem;
-  border-radius: 5px;
+  border-radius: 10px;
 `;
 
 const DetailInput = styled.textarea`
-  width: 70%;
+  width: 90%;
+  padding: 10px;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 20px;
 `;
 
 const StatusInput = styled.fieldset`
-  width: 80%;
-  margin: 10px;
+  display: flex;
+  flex-flow: column;
+  width: 90%;
   border: none;
 `;
 
