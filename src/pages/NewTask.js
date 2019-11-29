@@ -10,21 +10,33 @@ const Form = styled.form`
 const TitleInput = styled.input`
   width: 70%;
   margin: 10px;
+  height: 40px;
+  font-size: 1rem;
+  border-radius: 5px;
 `;
 
 const DetailInput = styled.textarea`
   width: 70%;
   margin: 10px;
+  border-radius: 5px;
 `;
 
-const StatusInput = styled.input`
-  width: 70%;
+const StatusInput = styled.fieldset`
+  width: 80%;
   margin: 10px;
+  border: none;
+`;
+
+const Label = styled.label`
+  font-size: 0.9rem;
+  margin: 5px;
 `;
 
 const SubmitButton = styled.button`
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: ${props => props.theme.default.secondary};
 `;
 
 export default function NewTask() {
@@ -50,20 +62,34 @@ export default function NewTask() {
     <Form onSubmit={handleSubmit}>
       <TitleInput
         type="text"
-        placeholder="Whats you Task?"
+        placeholder="What's you Task?"
         value={title}
         onChange={event => setTitle(event.target.value)}
       />
-      <StatusInput
+      {/* <StatusInput
         type="text"
         placeholder="What Status?"
         value={status}
         onChange={event => setStatus(event.target.value)}
-      />
+      /> */}
+      <StatusInput onChange={event => setStatus(event.target.value)}>
+        <Label>
+          <input type="radio" name="status" value="active" />
+          active
+        </Label>
+        <Label>
+          <input type="radio" name="status" value="progress" />
+          in-progress
+        </Label>
+        <Label>
+          <input type="radio" name="status" value="completed" />
+          completed
+        </Label>
+      </StatusInput>
       <DetailInput
         rows="15"
         type="text"
-        placeholder="Add Detail Description?"
+        placeholder="Add detailed Description!"
         value={detail}
         onChange={event => setDetail(event.target.value)}
       />
