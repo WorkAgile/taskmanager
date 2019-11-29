@@ -68,12 +68,6 @@ export default function NewTask() {
         value={title}
         onChange={event => setTitle(event.target.value)}
       />
-      {/* <StatusInput
-        type="text"
-        placeholder="What Status?"
-        value={status}
-        onChange={event => setStatus(event.target.value)}
-      /> */}
       <StatusInput onChange={event => setStatus(event.target.value)}>
         <Label>
           <input type="radio" name="status" value="active" />
