@@ -14,8 +14,8 @@ export default function GlobalStyles() {
           margin: 0;
           font-size: 16px;
           font-family: "Ubuntu", sans-serif;
-          color: ${props => props.theme.text};
-          background-color: ${props => props.theme.text};
+          color: ${theme.text};
+          background-color: ${theme.text};
         }
       `}
     />
