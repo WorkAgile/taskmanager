@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-const Container = styled.article`
+const Container = styled.button`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,12 +13,13 @@ const Container = styled.article`
   border-top-right-radius: 15px;
   border-bottom-left-radius: 15px;
   color: ${props => props.theme.default.text};
-  text-shadow: 1px 1px 1px rgba(91, 26, 9, 1);
+  font-size: 1rem;
+  font-weight: 700;
 `;
 
-function Task({ status, title }) {
+function Task({ status, title, detail }) {
   return (
-    <Container>
+    <Container onClick={detail}>
       <div>{title}</div>
       <div>{status}</div>
     </Container>

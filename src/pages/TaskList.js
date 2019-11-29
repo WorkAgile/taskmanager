@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Task from "../components/Task";
+
 const FooterFilter = styled.div`
   height: 40px;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 `;
 
 const ButtonActive = styled.button`
@@ -51,7 +55,7 @@ export default function TaskList() {
 
   React.useEffect(() => {
     fetchTasks();
-  }, []);
+  }, [filter]);
 
   return (
     <div>
@@ -67,7 +71,6 @@ export default function TaskList() {
         <ButtonActive
           onClick={() => {
             setFilter("/?status=active");
-            fetchTasks();
           }}
         >
           active
@@ -75,7 +78,6 @@ export default function TaskList() {
         <ButtonProgess
           onClick={() => {
             setFilter("/?status=progress");
-            fetchTasks();
           }}
         >
           in progress
@@ -83,7 +85,6 @@ export default function TaskList() {
         <ButtonComplete
           onClick={() => {
             setFilter("/?status=completed");
-            fetchTasks();
           }}
         >
           completed
@@ -91,7 +92,6 @@ export default function TaskList() {
         <ButtonAll
           onClick={() => {
             setFilter("");
-            fetchTasks();
           }}
         >
           show all
