@@ -28,12 +28,45 @@ const SubmitButton = styled.button`
 `;
 
 export default function NewTask() {
-  return (
-    <Form>
-      <TitleInput />
+  const [title, setTitle] = React.useState("");
+  const [status, setStatus] = React.useState("");
+  const [detail, setDetail] = React.useState("");
 
-      <StatusInput />
-      <DetailInput rows="15" />
+  async function handleSubmit(event) {
+    event.preventDefault();
+    await fetch("http://localhost:1234/tasks", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ title, status, detail })
+    });
+
+    setTitle("");
+    setDetail("");
+    setStatus("");
+  }
+  return (
+    <Form onSubmit={handleSubmit}>
+      <TitleInput
+        type="text"
+        placeholder="Whats you Task?"
+        value={title}
+        onChange={event => setTitle(event.target.value)}
+      />
+      <StatusInput
+        type="text"
+        placeholder="What Status?"
+        value={status}
+        onChange={event => setStatus(event.target.value)}
+      />
+      <DetailInput
+        rows="15"
+        type="text"
+        placeholder="Add Detail Description?"
+        value={detail}
+        onChange={event => setDetail(event.target.value)}
+      />
       <SubmitButton>Add Task</SubmitButton>
     </Form>
   );
