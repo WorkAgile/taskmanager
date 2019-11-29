@@ -18,11 +18,24 @@ const Container = styled.button`
 `;
 
 function Task({ status, title, detail }) {
+  const [isClicked, setIsClicked] = React.useState(false);
+
+  const Detail = styled.div`
+    visibility: ${isClicked ? "visible" : "hidden"};
+    height: 50px;
+    width: 98%;
+    padding: 10px;
+    background: #7f8fa6;
+  `;
+
   return (
-    <Container onClick={detail}>
-      <div>{title}</div>
-      <div>{status}</div>
-    </Container>
+    <>
+      <Container onClick={() => setIsClicked(!isClicked)}>
+        <div>{title}</div>
+        <div>{status}</div>
+      </Container>
+      <Detail>{detail}</Detail>
+    </>
   );
 }
 
