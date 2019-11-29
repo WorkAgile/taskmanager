@@ -5,7 +5,6 @@ import styled from "@emotion/styled";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GlobalStyles from "./GlobalStyles";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import TaskList from "./pages/TaskList";
 import NewTask from "./pages/NewTask";
 import AddTaskButton from "./components/AddTaskButton";
@@ -43,8 +42,6 @@ function App() {
               </Route>
             </Switch>
           </Main>
-
-          <Footer />
         </Container>
       </Router>
     </ThemeProvider>
