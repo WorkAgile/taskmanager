@@ -1,0 +1,34 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Haushaufgaben machen",
+      "status": "progress",
+      "detail": "Hausaufgaben für den neue Fische Kurs machen mit react.js"
+    },
+    {
+      "id": "2",
+      "title": "Putze",
+      "status": "completed",
+      "detail": "Das Badezimmer und Küche putzen , ordentlich!"
+    },
+    {
+      "title": "Test ",
+      "status": "progres",
+      "detail": "test text test text test texttest texttest texttest texttest texttest texttest texttest texttest texttest texttest texttest texttest texttest texttest texttest text",
+      "id": "omon16R"
+    },
+    {
+      "title": "Franz'i",
+      "status": "completed",
+      "detail": "Some description ",
+      "id": "CSsg9dJ"
+    },
+    {
+      "title": "Panche verhauen",
+      "status": "completed",
+      "detail": "Ihn ganz feste auf den Hintern hauen",
+      "id": "qlqJPOk"
+    }
+  ]
+}
