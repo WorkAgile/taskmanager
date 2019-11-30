@@ -21,7 +21,7 @@ const ButtonActive = styled.button`
   font-size: 14px;
   font-weight: 900;
   outline: none;
-  background-color: transparent;
+  background-color: #fff;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
 `;
 
@@ -34,7 +34,7 @@ const ButtonProgess = styled.button`
   font-size: 14px;
   font-weight: 900;
   outline: none;
-  background-color: transparent;
+  background-color: #fff;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
 `;
 
@@ -47,7 +47,7 @@ const ButtonComplete = styled.button`
   font-size: 14px;
   font-weight: 900;
   outline: none;
-  background-color: transparent;
+  background-color: #fff;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
 `;
 
@@ -60,7 +60,7 @@ const ButtonAll = styled.button`
   font-size: 14px;
   font-weight: 900;
   outline: none;
-  background-color: transparent;
+  background-color: #fff;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
 `;
 

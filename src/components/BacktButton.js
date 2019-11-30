@@ -5,23 +5,39 @@ import { Link } from "react-router-dom";
 const BackButtonBox = styled.div`
   display: flex;
   position: fixed;
-  bottom: 40px;
+  bottom: 50px;
   justify-content: flex-end;
   width: 100%;
 `;
 const BackNavButton = styled(Link)`
   text-decoration: none;
   justify-content: center;
-  align-items: center;
-  align-content: center;
   width: 60px;
   height: 60px;
   border-radius: 30px;
   background-color: ${props => props.theme.default.red};
   margin: 15px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+
+  animation: pulse 1.5s infinite;
+  @keyframes pulse {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
 `;
 
 const ButtonSvg = styled.svg`
+  width: 40px;
+  height: 40px;
   margin: 14px;
 `;
 
