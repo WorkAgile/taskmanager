@@ -7,9 +7,9 @@
       "id": 1
     },
     {
-      "title": "Putzen",
-      "status": "completed",
-      "detail": "Das Badezimmer putzen",
+      "title": "Waschen",
+      "status": "progress",
+      "detail": "Schmutzwäsche waschen",
       "id": 2
     }
   ]
