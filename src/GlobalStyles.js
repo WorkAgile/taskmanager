@@ -13,7 +13,7 @@ export default function GlobalStyles() {
         body {
           margin: 0;
           font-size: 16px;
-          font-family: "Ubuntu", sans-serif;
+          font-family: "Roboto", sans-serif;
           color: ${theme.text};
           background-color: ${theme.text};
         }

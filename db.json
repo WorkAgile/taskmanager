@@ -1,28 +1,22 @@
 {
   "tasks": [
     {
-      "id": "1",
+      "id": 1,
       "title": "Haushaufgaben machen",
       "status": "progress",
       "detail": "Hausaufgaben für den neue Fische Kurs machen mit react.js"
     },
     {
-      "id": "2",
+      "id": 2,
       "title": "Putze",
       "status": "completed",
       "detail": "Das Badezimmer und Küche putzen , ordentlich!"
     },
     {
-      "title": "BlaBla Bla",
+      "title": "Learn React JS",
       "status": "active",
-      "detail": "test",
-      "id": "xdKbjtp"
-    },
-    {
-      "title": "Rasen mähen",
-      "status": "progress",
-      "detail": "Den Rasen im Garten von Vater mähen am nächsten Samstag.",
-      "id": "M_OFR9R"
+      "detail": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "id": 3
     }
   ]
 }

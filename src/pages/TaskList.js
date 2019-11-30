@@ -6,6 +6,7 @@ const FooterFilter = styled.div`
   height: 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -13,34 +14,54 @@ const FooterFilter = styled.div`
 
 const ButtonActive = styled.button`
   flex-grow: 1;
-  background-color: #44bd32;
-  color: #f5f6fa;
-  font-size: 1rem;
+  height: 40px;
+  border-top: 2px solid #44bd32;
+  margin: 5px;
+  color: #353b48;
+  font-size: 14px;
+  font-weight: 900;
   outline: none;
-`;
-
-const ButtonAll = styled.button`
-  flex-grow: 1;
-  background-color: red;
-  color: #f5f6fa;
-  font-size: 1rem;
-  outline: none;
+  background-color: transparent;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
 `;
 
 const ButtonProgess = styled.button`
   flex-grow: 1;
-  background-color: #e1b12c;
-  color: #f5f6fa;
-  font-size: 1rem;
+  height: 40px;
+  border-top: 2px solid #e1b12c;
+  margin: 5px;
+  color: #353b48;
+  font-size: 14px;
+  font-weight: 900;
   outline: none;
+  background-color: transparent;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
 `;
 
 const ButtonComplete = styled.button`
   flex-grow: 1;
-  background-color: #7f8fa6;
-  color: #f5f6fa;
-  font-size: 1rem;
+  height: 40px;
+  border-top: 2px solid #7f8fa6;
+  margin: 5px;
+  color: #353b48;
+  font-size: 14px;
+  font-weight: 900;
   outline: none;
+  background-color: transparent;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+`;
+
+const ButtonAll = styled.button`
+  flex-grow: 1;
+  height: 40px;
+  border-top: 2px solid #e84118;
+  margin: 5px;
+  color: #353b48;
+  font-size: 14px;
+  font-weight: 900;
+  outline: none;
+  background-color: transparent;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
 `;
 
 export default function TaskList() {
@@ -73,28 +94,28 @@ export default function TaskList() {
             setFilter("/?status=active");
           }}
         >
-          active
+          ACTIVE
         </ButtonActive>
         <ButtonProgess
           onClick={() => {
             setFilter("/?status=progress");
           }}
         >
-          in progress
+          IN PROGRESS
         </ButtonProgess>
         <ButtonComplete
           onClick={() => {
             setFilter("/?status=completed");
           }}
         >
-          completed
+          COMPLETED
         </ButtonComplete>
         <ButtonAll
           onClick={() => {
             setFilter("");
           }}
         >
-          show all
+          SHOW ALL
         </ButtonAll>
       </FooterFilter>
     </div>
