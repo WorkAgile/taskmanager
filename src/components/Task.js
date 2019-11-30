@@ -3,17 +3,17 @@ import styled from "@emotion/styled";
 
 const Container = styled.button`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 98%;
-  height: 50px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 95%;
+  height: 100%;
   padding: 10px;
-  margin: 5px auto;
-  background: #7f8fa6;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  color: ${props => props.theme.default.text};
-  font-size: 1rem;
+  margin: 20px auto;
+  background: #fff;
+  border: 20px;
+  color: #353b48;
+  font-size: 1.2rem;
   font-weight: 700;
 `;
 
@@ -22,10 +22,10 @@ function Task({ status, title, detail }) {
 
   const Detail = styled.div`
     visibility: ${isClicked ? "visible" : "hidden"};
-    height: 50px;
+    height: 100%;
     width: 98%;
     padding: 10px;
-    background: #7f8fa6;
+    background: transparent;
   `;
 
   return (
@@ -33,8 +33,8 @@ function Task({ status, title, detail }) {
       <Container onClick={() => setIsClicked(!isClicked)}>
         <div>{title}</div>
         <div>{status}</div>
+        <Detail>{detail}</Detail>
       </Container>
-      <Detail>{detail}</Detail>
     </>
   );
 }

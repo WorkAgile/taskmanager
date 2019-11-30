@@ -3,34 +3,22 @@ import styled from "@emotion/styled";
 
 const HeaderBox = styled.div`
   width: 100%;
-  height: 100px;
-  text-align: center;
-  padding: 15px;
-  background-color: ${props => props.theme.default.primary};
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  background-color: ${props => props.theme.default.text};
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 `;
 const Logo = styled.h1`
-  color: ${props => props.theme.default.text};
-  text-shadow: 3px -1px 1px rgba(91, 26, 9, 1);
-  animation: pulse 2.5s infinite;
-  @keyframes pulse {
-    from {
-      transform: scale3d(1, 1, 1);
-    }
-
-    50% {
-      transform: scale3d(1.05, 1.05, 1.05);
-    }
-
-    to {
-      transform: scale3d(1, 1, 1);
-    }
-  }
+  color: ${props => props.theme.default.primary};
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
 `;
 
 export default function Header() {
   return (
     <HeaderBox>
-      <Logo>WorkAgile</Logo>
+      <Logo>Work Agile</Logo>
     </HeaderBox>
   );
 }

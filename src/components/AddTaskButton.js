@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const ButtonBox = styled.div`
   display: flex;
   position: fixed;
-  bottom: 40px;
+  bottom: 50px;
   justify-content: flex-end;
   width: 100%;
 `;
@@ -17,6 +17,22 @@ const NavigationButton = styled(Link)`
   border-radius: 30px;
   background-color: ${props => props.theme.default.red};
   margin: 15px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+
+  animation: pulse 1.5s infinite;
+  @keyframes pulse {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
 `;
 
 const ButtonSvg = styled.svg`
