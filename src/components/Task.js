@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
+export default Task;
 
-const Container = styled.button`
+const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,8 +18,16 @@ const Container = styled.button`
   font-weight: 700;
 `;
 
-function Task({ status, title, detail }) {
+const Remove = styled.button`
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  justify-self: flex-end;
+`;
+
+function Task({ id, status, title, detail }) {
   const [isClicked, setIsClicked] = React.useState(false);
+  const [removeId, setRemoveId] = React.useState("");
 
   const Detail = styled.div`
     visibility: ${isClicked ? "visible" : "hidden"};
@@ -28,15 +37,35 @@ function Task({ status, title, detail }) {
     background: #7f8fa6;
   `;
 
+  async function handleRemove() {
+    await fetch(`http://localhost:1234/tasks/${removeId}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+  }
+
+  React.useEffect(() => {
+    handleRemove();
+  }, [removeId]);
+
   return (
     <>
       <Container onClick={() => setIsClicked(!isClicked)}>
         <div>{title}</div>
         <div>{status}</div>
+        <Remove
+          onClick={() => {
+            setRemoveId(id);
+            window.location.reload();
+          }}
+        >
+          x
+        </Remove>
       </Container>
+
       <Detail>{detail}</Detail>
     </>
   );
 }
-
-export default Task;

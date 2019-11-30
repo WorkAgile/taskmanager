@@ -64,7 +64,7 @@ export default function NewTask() {
     <Form onSubmit={handleSubmit}>
       <TitleInput
         type="text"
-        placeholder="What's you Task?"
+        placeholder="What's your Task?"
         value={title}
         onChange={event => setTitle(event.target.value)}
       />

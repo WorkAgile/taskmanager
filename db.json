@@ -1,28 +1,16 @@
 {
   "tasks": [
     {
-      "id": "1",
-      "title": "Haushaufgaben machen",
-      "status": "progress",
-      "detail": "Hausaufgaben für den neue Fische Kurs machen mit react.js"
-    },
-    {
-      "id": "2",
-      "title": "Putze",
-      "status": "completed",
-      "detail": "Das Badezimmer und Küche putzen , ordentlich!"
-    },
-    {
-      "title": "BlaBla Bla",
+      "title": "Essen machen",
       "status": "active",
-      "detail": "test",
-      "id": "xdKbjtp"
+      "detail": "Etwas leckeres zu essen zubereiten",
+      "id": 1
     },
     {
-      "title": "Rasen mähen",
-      "status": "progress",
-      "detail": "Den Rasen im Garten von Vater mähen am nächsten Samstag.",
-      "id": "M_OFR9R"
+      "title": "Putzen",
+      "status": "completed",
+      "detail": "Das Badezimmer putzen",
+      "id": 2
     }
   ]
 }
