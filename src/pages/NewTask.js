@@ -5,6 +5,7 @@ const Form = styled.form`
   display: flex;
   flex-flow: column;
   align-items: center;
+  margin-top: 30px;
 `;
 
 const TitleInput = styled.input`
@@ -12,14 +13,30 @@ const TitleInput = styled.input`
   margin: 10px;
   height: 40px;
   font-size: 1rem;
-  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #353b48;
+  border-radius: 5px;
+  outline: none;
+  &:hover,
+  &:active {
+    border: 1px solid #44bd32;
+    transition: 0.3s;
+  }
 `;
 
 const DetailInput = styled.textarea`
   width: 90%;
-  padding: 10px;
+  padding: 20px;
   margin: 10px;
-  border-radius: 20px;
+  font-size: 1rem;
+  border: 1px solid #353b48;
+  border-radius: 5px;
+  outline: none;
+  &:hover,
+  &:active {
+    border: 1px solid #44bd32;
+    transition: 0.3s;
+  }
 `;
 
 const StatusInput = styled.fieldset`
@@ -30,15 +47,23 @@ const StatusInput = styled.fieldset`
 `;
 
 const Label = styled.label`
-  font-size: 0.9rem;
-  margin: 5px;
+  font-size: 0.7rem;
+  margin: 10px;
 `;
 
 const SubmitButton = styled.button`
-  width: 80px;
+  width: 90%;
   height: 40px;
+  margin-top: 30px;
+  font-size: 1rem;
+  border: 1px solid #353b48;
   border-radius: 5px;
-  background-color: ${props => props.theme.default.secondary};
+  outline: none;
+  &:hover,
+  &:active {
+    border: 1px solid #44bd32;
+    transition: 0.3s;
+  }
 `;
 
 export default function NewTask() {
@@ -64,32 +89,32 @@ export default function NewTask() {
     <Form onSubmit={handleSubmit}>
       <TitleInput
         type="text"
-        placeholder="What's you Task?"
+        placeholder="Name your task"
         value={title}
         onChange={event => setTitle(event.target.value)}
       />
       <StatusInput onChange={event => setStatus(event.target.value)}>
         <Label>
           <input type="radio" name="status" value="active" />
-          active
+          ACTIVE
         </Label>
         <Label>
           <input type="radio" name="status" value="progress" />
-          in-progress
+          IN PROGRESS
         </Label>
         <Label>
           <input type="radio" name="status" value="completed" />
-          completed
+          COMPLETED
         </Label>
       </StatusInput>
       <DetailInput
         rows="15"
         type="text"
-        placeholder="Add detailed Description!"
+        placeholder="Add description for your task"
         value={detail}
         onChange={event => setDetail(event.target.value)}
       />
-      <SubmitButton>Add Task</SubmitButton>
+      <SubmitButton>ADD TASK</SubmitButton>
     </Form>
   );
 }

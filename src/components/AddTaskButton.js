@@ -17,7 +17,7 @@ const NavigationButton = styled(Link)`
   border-radius: 30px;
   background-color: ${props => props.theme.default.red};
   margin: 15px;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
 
   animation: pulse 1.5s infinite;
   @keyframes pulse {
