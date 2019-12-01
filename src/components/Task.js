@@ -1,21 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-  width: 95%;
-  height: 100%;
-  padding: 10px;
-  margin: 20px auto;
-  background: #fff;
-  border: 20px;
-  color: #353b48;
-  font-size: 1.2rem;
-  font-weight: 700;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
-`;
-
 const Title = styled.div`
   flex-grow: 1;
   padding: 3px;
@@ -47,6 +32,24 @@ export default function Task({ idValue, status, title, detail }) {
   const [remove, setRemove] = React.useState();
   const [statusValue, setStatusValue] = React.useState(status);
   const [id, setId] = React.useState(idValue);
+
+  const Container = styled.div`
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+    padding: 10px;
+    margin: 20px auto;
+    background: #fff;
+    border: 20px;
+    color: #353b48;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: ${statusValue === "active" ? "#44bd32" : "none"} 2px solid;
+    border: ${statusValue === "progress" ? "#e1b12c" : "none"} 2px solid;
+    border: ${statusValue === "completed" ? "#7f8fa6" : "none"} 2px solid;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  `;
 
   const Detail = styled.div`
     display: ${isClicked ? "block" : "none"};
