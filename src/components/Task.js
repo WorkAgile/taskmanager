@@ -19,11 +19,11 @@ const Title = styled.div`
   flex-grow: 1;
   padding: 3px;
   border-radius: 5px;
-
   &:hover,
   &:active {
     color: #e84118;
     cursor: pointer;
+    transition: 0.4s;
   }
 `;
 
@@ -36,9 +36,15 @@ const StatusBox = styled.div`
 const Remove = styled.div`
   height: 20px;
   width: 20px;
-  background-color: #e84118;
+  background-color: #44bd32;
   margin-left: 10px;
   border-radius: 15px;
+  &:hover,
+  &:active {
+    background-color: #e84118;
+    #e84118cursor: pointer;
+    transition: 0.4s;
+  }
 `;
 
 export default function Task({ id, status, title, detail }) {
@@ -52,7 +58,7 @@ export default function Task({ id, status, title, detail }) {
     margin: 0px auto;
     color: #353b48;
     font-size: 0.9rem;
-    font-weight: 800;
+    font-weight: 500;
     background: transparent;
   `;
 
