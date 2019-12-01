@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-const Container = styled.button`
+const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -16,7 +16,24 @@ const Container = styled.button`
   font-weight: 700;
 `;
 
-const Remove = styled.button`
+const Title = styled.div`
+  padding: 3px;
+  border-radius: 5px;
+
+  &:hover {
+    font-weight: 900;
+    padding: 3px;
+    cursor: pointer;
+    background-color: ${props => props.theme.default.secondary};
+  }
+  &:active {
+    border: 1px solid #44bd32;
+    transition: 0.3s;
+    background-color: ${props => props.theme.default.secondary};
+  }
+`;
+
+const Remove = styled.div`
   height: 25px;
   width: 25px;
 `;
@@ -29,7 +46,13 @@ export default function Task({ id, status, title, detail }) {
     display: ${isClicked ? "block" : "none"};
     height: 100%;
     width: 98%;
-    padding: 10px;
+    width: 95%;
+    height: 100%;
+    margin: 0px auto;
+    background: #fff;
+    color: #353b48;
+    font-size: 1rem;
+    font-weight: 800;
     background: transparent;
   `;
 
@@ -48,8 +71,8 @@ export default function Task({ id, status, title, detail }) {
 
   return (
     <>
-      <Container onClick={() => setIsClicked(!isClicked)}>
-        <div>{title}</div>
+      <Container>
+        <Title onClick={() => setIsClicked(!isClicked)}>{title}</Title>
         <div>{status}</div>
         <Remove
           onClick={() => {
