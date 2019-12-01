@@ -43,7 +43,7 @@ const Remove = styled.div`
   &:hover,
   &:active {
     background-color: #e84118;
-    #e84118cursor: pointer;
+    cursor: pointer;
     transition: 0.4s;
   }
 `;
