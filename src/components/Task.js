@@ -45,9 +45,10 @@ export default function Task({ idValue, status, title, detail }) {
     color: #353b48;
     font-size: 1.2rem;
     font-weight: 700;
-    border: ${statusValue === "active" ? "#44bd32" : "none"} 2px solid;
-    border: ${statusValue === "progress" ? "#e1b12c" : "none"} 2px solid;
-    border: ${statusValue === "completed" ? "#7f8fa6" : "none"} 2px solid;
+    border-radius: 5px;
+    border: ${statusValue === "active" ? "#44bd32" : "none"} 3px solid;
+    border: ${statusValue === "progress" ? "#e1b12c" : "none"} 3px solid;
+    border: ${statusValue === "completed" ? "#7f8fa6" : "none"} 3px solid;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
   `;
 
