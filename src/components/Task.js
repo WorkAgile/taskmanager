@@ -48,9 +48,11 @@ const Remove = styled.div`
   }
 `;
 
-export default function Task({ id, status, title, detail }) {
+export default function Task({ idValue, status, title, detail }) {
   const [isClicked, setIsClicked] = React.useState(false);
   const [remove, setRemove] = React.useState();
+  const [statusValue, setStatusValue] = React.useState(status);
+  const [id, setId] = React.useState(idValue);
 
   const Detail = styled.div`
     display: ${isClicked ? "block" : "none"};
@@ -76,11 +78,40 @@ export default function Task({ id, status, title, detail }) {
     handleRemove();
   }, [remove]);
 
+  async function handleStatus(value) {
+    setId(idValue);
+    setStatusValue(value);
+    await fetch(`http://localhost:1234/tasks/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        status: value
+      })
+    });
+  }
+
   return (
     <>
       <Container>
         <Title onClick={() => setIsClicked(!isClicked)}>{title}</Title>
-        <StatusBox>{status}</StatusBox>
+        <select
+          value={statusValue}
+          onChange={event => {
+            handleStatus(event.target.value, idValue);
+          }}
+        >
+          <option id="1" value="active">
+            active
+          </option>
+          <option id="1" value="progess" selceted={status}>
+            progess
+          </option>
+          <option id="1" value="completed" selceted={status}>
+            completed
+          </option>
+        </select>
         <Remove
           onClick={() => {
             setRemove(id);
