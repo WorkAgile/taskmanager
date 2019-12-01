@@ -28,12 +28,6 @@ const Title = styled.div`
   }
 `;
 
-const StatusBox = styled.div`
-  font-size: 1rem;
-  align-items: center;
-  align-content: center;
-`;
-
 const Remove = styled.div`
   height: 20px;
   width: 20px;
@@ -101,7 +95,8 @@ export default function Task({ idValue, status, title, detail }) {
             color: "#353B48",
             border: "0px",
             outline: "none",
-            background: "#F5F6FA"
+            background: "#F5F6FA",
+            fontSize: "16px"
           }}
           value={statusValue}
           onChange={event => {
@@ -112,7 +107,7 @@ export default function Task({ idValue, status, title, detail }) {
             active
           </option>
           <option id="1" value="progress" selceted={status}>
-            in progess
+            in progress
           </option>
           <option id="1" value="completed" selceted={status}>
             completed
