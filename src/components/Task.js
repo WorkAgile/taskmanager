@@ -22,7 +22,7 @@ const Title = styled.div`
   border-radius: 5px;
   &:hover,
   &:active {
-    color: #e84118;
+    color: #e1b12c;
     cursor: pointer;
     transition: 0.4s;
   }
@@ -97,6 +97,12 @@ export default function Task({ idValue, status, title, detail }) {
       <Container>
         <Title onClick={() => setIsClicked(!isClicked)}>{title}</Title>
         <select
+          style={{
+            color: "#353B48",
+            border: "0px",
+            outline: "none",
+            background: "#F5F6FA"
+          }}
           value={statusValue}
           onChange={event => {
             handleStatus(event.target.value, idValue);
@@ -105,8 +111,8 @@ export default function Task({ idValue, status, title, detail }) {
           <option id="1" value="active">
             active
           </option>
-          <option id="1" value="progess" selceted={status}>
-            progess
+          <option id="1" value="progress" selceted={status}>
+            in progess
           </option>
           <option id="1" value="completed" selceted={status}>
             completed
