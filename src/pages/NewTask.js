@@ -32,6 +32,7 @@ const DetailInput = styled.textarea`
   border: 1px solid #353b48;
   border-radius: 5px;
   outline: none;
+
   &:hover,
   &:active {
     border: 1px solid #44bd32;
@@ -58,12 +59,13 @@ const SubmitButton = styled.button`
   font-size: 1rem;
   border: 1px solid #353b48;
   border-radius: 5px;
-  /* outline: none;
+  outline: none;
+  background-color: ${props => props.theme.default.text};
   &:hover,
   &:active {
     border: 1px solid #44bd32;
     transition: 0.3s;
-  } */
+  }
 `;
 
 export default function NewTask() {
