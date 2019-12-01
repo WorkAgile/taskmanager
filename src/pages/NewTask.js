@@ -32,7 +32,6 @@ const DetailInput = styled.textarea`
   border: 1px solid #353b48;
   border-radius: 5px;
   outline: none;
-
   &:hover,
   &:active {
     border: 1px solid #44bd32;
