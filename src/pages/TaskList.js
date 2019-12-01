@@ -68,20 +68,25 @@ export default function TaskList() {
   const [tasks, setTask] = React.useState([]);
   const [filter, setFilter] = React.useState("");
 
-  async function fetchTasks() {
+  async function fetchTaskList() {
     const response = await fetch(`http://localhost:1234/tasks${filter}`);
     const newTask = await response.json();
     setTask(newTask);
   }
 
   React.useEffect(() => {
-    fetchTasks();
+    fetchTaskList();
   }, [filter]);
+
+  // React.useEffect(() => {
+  //   fetchTasks();
+  // }, [filter]);
 
   return (
     <div>
       {tasks.map(task => (
         <Task
+          id={task.id}
           key={task.id}
           title={task.title}
           detail={task.detail}
