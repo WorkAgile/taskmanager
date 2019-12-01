@@ -86,7 +86,7 @@ export default function TaskList() {
     <div>
       {tasks.map(task => (
         <Task
-          id={task.id}
+          idValue={task.id}
           key={task.id}
           title={task.title}
           detail={task.detail}
