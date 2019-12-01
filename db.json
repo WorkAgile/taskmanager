@@ -1,16 +1,28 @@
 {
   "tasks": [
     {
-      "id": 2,
-      "title": "Putze",
-      "status": "completed",
-      "detail": "Das Badezimmer und Küche putzen , ordentlich!"
+      "title": "Learning React JS",
+      "status": "progress",
+      "detail": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "id": 6
     },
     {
-      "title": "Klettern",
-      "status": "progress",
-      "detail": "Mit Duygu und Joris klettern im Stundwerk",
-      "id": 5
+      "title": "Learning HTML and CSS",
+      "status": "completed",
+      "detail": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+      "id": 7
+    },
+    {
+      "title": "Clean my room",
+      "status": "active",
+      "detail": "Clean my room ",
+      "id": 8
+    },
+    {
+      "title": "Parprograming with my colege",
+      "status": "active",
+      "detail": "Working on a project together.",
+      "id": 9
     }
   ]
 }
