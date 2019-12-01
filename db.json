@@ -1,22 +1,16 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "title": "Haushaufgaben machen",
-      "status": "progress",
-      "detail": "Hausaufgaben für den neue Fische Kurs machen mit react.js"
-    },
-    {
       "id": 2,
       "title": "Putze",
       "status": "completed",
       "detail": "Das Badezimmer und Küche putzen , ordentlich!"
     },
     {
-      "title": "Learn React JS",
-      "status": "active",
-      "detail": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "id": 3
+      "title": "Klettern",
+      "status": "progress",
+      "detail": "Mit Duygu und Joris klettern im Stundwerk",
+      "id": 5
     }
   ]
 }
