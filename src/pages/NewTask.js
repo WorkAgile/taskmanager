@@ -69,7 +69,7 @@ const SubmitButton = styled.button`
 
 export default function NewTask() {
   const [title, setTitle] = React.useState("");
-  const [status, setStatus] = React.useState("");
+  const [status, setStatus] = React.useState("active");
   const [detail, setDetail] = React.useState("");
 
   async function handleSubmit(event) {

@@ -2,25 +2,25 @@
   "tasks": [
     {
       "title": "Learning HTML and CSS",
-      "status": "progress",
+      "status": "active",
       "detail": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
       "id": 7
     },
     {
       "title": "Add filter function",
-      "status": "completed",
+      "status": "progress",
       "detail": "Add filter function to filter the Tasks by status",
       "id": 8
     },
     {
       "title": "Create App",
-      "status": "active",
+      "status": "progress",
       "detail": "Create to do App with Panche!",
       "id": 9
     },
     {
       "title": "Climbing",
-      "status": "progress",
+      "status": "completed",
       "detail": "Climbing at Kletterfabrik with friends.",
       "id": 10
     }

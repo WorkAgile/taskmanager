@@ -46,9 +46,9 @@ export default function Task({ idValue, status, title, detail, onClick }) {
     font-size: 1.2rem;
     font-weight: 700;
     border-radius: 5px;
-    border: ${statusValue === "active" ? "#44bd32" : "none"} 3px solid;
-    border: ${statusValue === "progress" ? "#e1b12c" : "none"} 3px solid;
-    border: ${statusValue === "completed" ? "#7f8fa6" : "none"} 3px solid;
+    border: ${statusValue === "active" ? "#44bd32" : "none"} 1px solid;
+    border: ${statusValue === "progress" ? "#e1b12c" : "none"} 1px solid;
+    border: ${statusValue === "completed" ? "#7f8fa6" : "none"} 1px solid;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
   `;
 
