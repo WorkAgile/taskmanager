@@ -96,7 +96,7 @@ export default function NewTask() {
       />
       <StatusInput onChange={event => setStatus(event.target.value)}>
         <Label>
-          <input type="radio" name="status" value="active" />
+          <input type="radio" name="status" value="active" checked="yes" />
           ACTIVE
         </Label>
         <Label>
