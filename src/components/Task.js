@@ -27,9 +27,9 @@ const Remove = styled.div`
   }
 `;
 
-export default function Task({ idValue, status, title, detail }) {
+export default function Task({ idValue, status, title, detail, onClick }) {
   const [isClicked, setIsClicked] = React.useState(false);
-  const [remove, setRemove] = React.useState();
+
   const [statusValue, setStatusValue] = React.useState(status);
   const [id, setId] = React.useState(idValue);
 
@@ -62,19 +62,6 @@ export default function Task({ idValue, status, title, detail }) {
     font-weight: 500;
     background: transparent;
   `;
-
-  async function handleRemove() {
-    await fetch(`http://localhost:1234/tasks/${remove}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json"
-      }
-    });
-  }
-
-  React.useEffect(() => {
-    handleRemove();
-  }, [remove]);
 
   async function handleStatus(value) {
     setId(idValue);
@@ -117,12 +104,7 @@ export default function Task({ idValue, status, title, detail }) {
             completed
           </option>
         </select>
-        <Remove
-          onClick={() => {
-            setRemove(id);
-            window.location.reload();
-          }}
-        >
+        <Remove onClick={onClick}>
           <svg width="20" height="20" fill="#fff" viewBox="0 0 24 24">
             <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
             <path d="M0 0h24v24H0z" fill="none" />

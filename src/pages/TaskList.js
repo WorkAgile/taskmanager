@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Task from "../components/Task";
+import { fetchTaskList } from "../components/fechTask";
 
 const FooterFilter = styled.div`
   height: 40px;
@@ -67,25 +68,45 @@ const ButtonAll = styled.button`
 export default function TaskList() {
   const [tasks, setTask] = React.useState([]);
   const [filter, setFilter] = React.useState("");
+  const [remove, setRemove] = React.useState();
+  // async function fetchTaskList() {
+  //   const response = await fetch(`http://localhost:1234/tasks${filter}`);
+  //   const newTask = await response.json();
+  //   setTask(newTask);
+  // }
 
-  async function fetchTaskList() {
-    const response = await fetch(`http://localhost:1234/tasks${filter}`);
-    const newTask = await response.json();
-    setTask(newTask);
+  async function getTasks(filter) {
+    const startTasks = await fetchTaskList(filter);
+    setTask(startTasks);
+  }
+  async function handleRemove() {
+    await fetch(`http://localhost:1234/tasks/${remove}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
   }
 
   React.useEffect(() => {
-    fetchTaskList();
-  }, [filter]);
+    handleRemove();
+    getTasks(filter);
+    setRemove("");
+  }, [remove]);
+
+  React.useEffect(() => {
+    getTasks(filter);
+  }, [filter, remove]);
 
   // React.useEffect(() => {
   //   fetchTasks();
   // }, [filter]);
-
+  console.log(remove);
   return (
     <div>
       {tasks.map(task => (
         <Task
+          onClick={() => setRemove(task.id)}
           idValue={task.id}
           key={task.id}
           title={task.title}

@@ -2,27 +2,27 @@
   "tasks": [
     {
       "title": "Learning HTML and CSS",
-      "status": "active",
+      "status": "progress",
       "detail": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
       "id": 7
     },
     {
-      "title": "Parprograming with my colege",
+      "title": "Add filter function",
+      "status": "completed",
+      "detail": "Add filter function to filter the Tasks by status",
+      "id": 8
+    },
+    {
+      "title": "Create App",
       "status": "active",
-      "detail": "Working on a project together.",
+      "detail": "Create to do App with Panche!",
       "id": 9
     },
     {
-      "title": "Add functionality to a single Task",
-      "status": "completed",
-      "detail": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-      "id": 10
-    },
-    {
-      "title": "Build App",
+      "title": "Climbing",
       "status": "progress",
-      "detail": "build to do App with Panche ",
-      "id": 11
+      "detail": "Climbing at Kletterfabrik with friends.",
+      "id": 10
     }
   ]
 }
